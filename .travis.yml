@@ -7,7 +7,8 @@ install:
 - go get github.com/jgautheron/goconst/cmd/goconst
 - go get github.com/kisielk/errcheck
 - go get github.com/golang/dep/cmd/dep
-- go get github.com/sensu-community/sensu-plugin-sdk
+- go get github.com/sensu-community/sensu-plugin-sdk/sensu
+- go get github.com/exaion-edf/sensu-zulip-handler/zulip
 script:
 - gometalinter.v1 --vendor --disable-all --enable=vet --enable=ineffassign
   --enable=goconst --tests ./...

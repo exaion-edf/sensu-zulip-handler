@@ -1,25 +1,25 @@
 package main
 
 import (
-	"./zulip"
 	"fmt"
+	"github.com/exaion-edf/sensu-zulip-handler/zulip"
+	"github.com/sensu-community/sensu-plugin-sdk/sensu"
 	corev2 "github.com/sensu/sensu-go/api/core/v2"
-	"github.com/sensu-community/sensu-plugin-sdk"
 )
 
 type HandlerConfig struct {
 	sensu.PluginConfig
-	ZulipUrl string
-	ZulipChannel    string
-	ZulipBotEmail   string
-	ZulipBotKey    string
+	ZulipUrl      string
+	ZulipChannel  string
+	ZulipBotEmail string
+	ZulipBotKey   string
 }
 
 const (
 	zulipUrl = "zulip-url"
-	channel    = "channel"
-	botEmail   = "bot-email"
-	botKey    = "bot-key"
+	channel  = "channel"
+	botEmail = "bot-email"
+	botKey   = "bot-key"
 )
 
 var (
@@ -114,7 +114,7 @@ func sendMessage(event *corev2.Event) error {
 		event.Check.Name,
 		event.Entity.Name,
 		event.Check.Output,
-		)
+	)
 
 	_, err := c.SendMessage(
 		config.ZulipChannel,
