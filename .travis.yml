@@ -11,6 +11,7 @@ install:
 - go get github.com/inconshreveable/mousetrap
 - go get github.com/sensu-community/sensu-plugin-sdk/sensu
 - go get github.com/exaion-edf/sensu-zulip-handler/zulip
+- go get github.com/konsorten/go-windows-terminal-sequences
 script:
 - gometalinter.v1 --vendor --disable-all --enable=vet --enable=ineffassign
   --enable=goconst --tests ./...
