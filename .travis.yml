@@ -7,6 +7,8 @@ install:
 - go get github.com/jgautheron/goconst/cmd/goconst
 - go get github.com/kisielk/errcheck
 - go get github.com/golang/dep/cmd/dep
+- go get github.com/spf13/cobra
+- go get github.com/inconshreveable/mousetrap
 - go get github.com/sensu-community/sensu-plugin-sdk/sensu
 - go get github.com/exaion-edf/sensu-zulip-handler/zulip
 script:
